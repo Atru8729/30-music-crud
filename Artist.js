@@ -17,7 +17,13 @@ class Artist {
         console.log(dainosPavadinimas);
     }
     playlist() {
+        console.log(`${this.atlikejas}'s playlist:`);
+        console.log(`====================`);
 
+        console.log(`1. Bumciki (0)`);
+        console.log(`2. Tra lia lai (0)`);
+        console.log(`3. Oj lijo lijo (0)`);
+        console.log(`4. Kai grazumo (0)`);
     }
     playSong() {
 

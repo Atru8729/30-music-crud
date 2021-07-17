@@ -13,7 +13,7 @@ raimonda.addSong('Tra lia lai');
 raimonda.addSong('Oj lijo lijo');
 raimonda.addSong('Kai grazumo');
 
-// raimonda.playlist();
+raimonda.playlist();
 // // Raimonda's playlist:
 // // ====================
 // // 1. Bumciki (0)
