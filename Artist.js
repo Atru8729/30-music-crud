@@ -1,12 +1,15 @@
 class Artist {
-    constructor(atlikejas) {
+    constructor(atlikejas, currency) {
         this.atlikejas = atlikejas;
+        this.currency = currency;
+
     }
     intro() {
         console.log(`Hi, my name is ${this.atlikejas} and I am a musician!`);
     }
-    songPrice() {
-
+    songPrice(priceInCents) {
+        const price = (priceInCents / 100).toFixed(2);
+        console.log(`Raimonda's price per song is ${price} ${this.currency}`);
     }
     addSong() {
 
