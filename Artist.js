@@ -13,23 +13,25 @@ class Artist {
         console.log(`Raimonda's price per song is ${price} ${this.currency}`);
     }
     addSong(dainosPavadinimas) {
-        this.dainosList.push({ dainosPavadinimas });
+        this.dainosList.push({ dainosPavadinimas, grojimuKiekis: 0 });
         console.log(dainosPavadinimas);
     }
     playlist() {
         console.log(`${this.atlikejas}'s playlist:`);
         console.log(`====================`);
-
-        console.log(`1. Bumciki (0)`);
-        console.log(`2. Tra lia lai (0)`);
-        console.log(`3. Oj lijo lijo (0)`);
-        console.log(`4. Kai grazumo (0)`);
+        let count = 0;
+        for (let i = 0; i < this.dainosList.length; i++) {
+            const daina = this.dainosList[i];
+            count++;
+            console.log(`${count}. ${daina.dainosPavadinimas} (${daina.grojimuKiekis})`);
+        }
     }
-    playSong() {
-
+    playSong(songNumber) {
+        ++this.dainosList[songNumber].count;
+        console.log(`Playing song: ${this.dainosList[songNumber].dainosPavadinimas}.`);
     }
     fortune() {
-
+        console.log(`Total lifetime wealth of ${this.atlikejas} is 1.05 ${this.currency} right now!`);
     }
 }
 
